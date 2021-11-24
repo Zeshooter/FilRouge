@@ -1,0 +1,122 @@
+
+
+header {
+    border : 2px solid #DDBEA9;
+    Margin : 0px;
+    padding: 0px;
+}
+
+body{
+    margin : 0px;
+    background-color: #FFF1E6;
+}
+
+img[src="./logo.gif"] {
+    margin-top: 10px;
+    margin-left: 10px;
+    width:200px;
+    height:200px;
+    float: left;
+}
+/* Slogan */
+#slogan{
+    font-family: 'Dancing Script', cursive;
+}
+
+#p1{
+    position: absolute;
+    font-size: 1.5em;
+    top: -10px;
+    left : 220px;
+    
+}
+
+#p2{
+    position : absolute;
+    font-size: 1.1em;
+    top:18px;
+    left:400px;
+}
+/* Boutons d'inscription et de conenxion */
+#connexion {
+    position:absolute;
+    top:10px;
+    left:600px;
+}
+/* Design de tous les boutons du site */
+.boutonstyle{
+    border: 0;
+    line-height: 2.5;
+    padding: 0 5px;
+    font-size: 0.7rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #cb997e;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.boutonstyle:hover {
+    background-color: #ddbea9;
+}
+
+.boutonstyle:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+    inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+#searchbar {
+    position: absolute;
+    top : 60px;
+    left : 230px;
+    width: 33em;
+}
+
+#recherche {
+    width: 80%;
+}
+
+/* Menu de navigation */
+
+#deroulant{
+    position : relative;
+    top : 100px;
+    left : 230px;
+    width: 100%;
+    height : 30px;
+    margin:0cm;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 5px;
+    font-size: 0.7rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #cb997e;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.menu {
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+}
+.sousmenu {
+   height : auto;
+   width : 100px;
+   float : left;
+   
+}
