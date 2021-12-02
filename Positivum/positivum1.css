@@ -1,24 +1,23 @@
 /* cOMMENTAIRES */
 
 header {
+    display : flex;
     border : 2px solid #DDBEA9;
     Margin : 0px;
     padding: 0px;
 }
 
 body{
-    display : flex;
     margin : 0px;
     background-color: #FFF1E6;
 }
 
-img[src="./logo.jpg"] {
+img[src="./Logo.jpg"] {
     margin-top: 10px;
     margin-left: 10px;
-    width:200px;
-    height:200px;
-    float: left;
+    height: 5vw;
 }
+
 /* Slogan */
 #slogan{
     font-family: 'Dancing Script', cursive;
