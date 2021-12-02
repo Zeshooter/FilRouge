@@ -44,10 +44,10 @@ img[src="./Logo.jpg"]:hover {
     left:400px;
 }
 /* Boutons d'inscription et de conenxion */
-/* #connexion {
+#connexion {
     position:absolute;
     top:10px;
-    left:600px; */
+    left:600px;
 }
 /* Design de tous les boutons du site */
 .boutonstyle{
