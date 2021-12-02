@@ -7,6 +7,7 @@ header {
 }
 
 body{
+    display : flex;
     margin : 0px;
     background-color: #FFF1E6;
 }
