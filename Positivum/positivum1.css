@@ -27,37 +27,27 @@ img[src="./Logo.jpg"]:hover {
 
 /* Slogan */
 
-#logo_et_slogan {
-    display : flex;
-    
-}
 #slogan{
     font-family: 'Dancing Script';
-    width : 5vw;
 }
 
 #p1{
-    /* position: absolute; */
     font-size: 1vw;
-    /* top: -10px;
-    left : 220px; */
-    
+    margin-left :-3vw; 
 }
 
 #p2{
-    position : absolute;
-    font-size: 1.5em;
-    top:18px;
-    left:400px;
+    font-size: 1vw;
+    margin-left:-2vw;
 }
 /* Boutons d'inscription et de conenxion */
 #connexion {
-    position:absolute;
+    /* position:absolute;
     top:10px;
-    left:600px;
+    left:600px; */
 }
 /* Design de tous les boutons du site */
-.boutonstyle{
+/* .boutonstyle{
     border: 0;
     line-height: 2.5;
     padding: 0 5px;
@@ -82,7 +72,7 @@ img[src="./Logo.jpg"]:hover {
 .boutonstyle:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
     inset 2px 2px 3px rgba(0, 0, 0, .6);
-}
+} */
 
 /* #searchbar {
     position: absolute;
@@ -97,7 +87,7 @@ img[src="./Logo.jpg"]:hover {
 
 /* Menu de navigation */
 
-#deroulant{
+/* #deroulant{
     position : relative;
     top : 100px;
     left : 230px;
@@ -132,4 +122,4 @@ img[src="./Logo.jpg"]:hover {
    width : 100px;
    float : left;
    
-}
+} */
