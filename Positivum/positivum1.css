@@ -26,16 +26,20 @@ img[src="./Logo.jpg"]:hover {
 }
 
 /* Slogan */
-
 #slogan{
     font-family: 'Dancing Script';
 }
 
 #p1{
     font-size: 1vw;
-    margin-left :-3vw; 
+    margin-left :-3vw;
+    margin-top:0.2vw; 
 }
 
+#centre_header{
+    display:flex;
+    flex-direction: column;
+}
 #p2{
     font-size: 1vw;
     margin-left:-2vw;
