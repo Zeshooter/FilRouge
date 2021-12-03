@@ -26,6 +26,11 @@ img[src="./Logo.jpg"]:hover {
 }
 
 /* Slogan */
+
+#logo_et_slogan {
+    display : flex;
+    
+}
 #slogan{
     font-family: 'Dancing Script';
     width : 5vw;
