@@ -28,6 +28,7 @@ img[src="./img/Logo.jpg"]:hover {
 /* Slogan */
 #slogan{
     font-family: 'Dancing Script';
+    margin-right : 50vw;
 }
 
 #p1{
@@ -58,7 +59,25 @@ img[src="./img/Logo.jpg"]:hover {
     margin-left : 3vw;
 }
 
+img[src="./img/facebook.png"], img[src="./img/instagram.png"], img[src="./img/twitter.png"] {
+    height: 3vw;
+    padding : 0.2vw;
+}
 /* Barre de navigation */
+#recherche {
+    border:#cb997e 2px solid;
+    border-radius : 30px; 
+    height: 2vh;
+    width: 80%;
+    z-index:1;
+    justify-content: center;
+}
+
+img[src="./img/loupe.png"] {
+    height : 2vh;
+    z-index:2;
+    justify-content: center;
+}
 
 /* Design de tous les boutons du site */
 /* .boutonstyle{
