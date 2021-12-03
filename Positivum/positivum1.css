@@ -1,9 +1,11 @@
 /* MAJ 021221 */
+*{
+    MARGIN : 0px;
+    padding : 0px;
+}
 
 header {
     display : flex;
-    Margin : 0px;
-    padding: 0px;
 }
 
 body{
