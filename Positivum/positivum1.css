@@ -1,6 +1,6 @@
-/* MAJ 021221 */
+/* MAJ 031221 */
 *{
-    MARGIN : 0px;
+    margin : 0px;
     padding : 0px;
 }
 
@@ -9,14 +9,13 @@ header {
 }
 
 body{
-    margin : 0px;
     background-color: #FFF1E6;
 }
 
 /* logo Positivum */
 img[src="./Logo.jpg"] {
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-top: 1vw;
+    margin-left: 1vw;
     height: 10vw;
 }
 
@@ -28,14 +27,15 @@ img[src="./Logo.jpg"]:hover {
 
 /* Slogan */
 #slogan{
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script';
+    width : 5vw;
 }
 
 #p1{
-    position: absolute;
-    font-size: 3em;
-    top: -10px;
-    left : 220px;
+    /* position: absolute; */
+    font-size: 1vw;
+    /* top: -10px;
+    left : 220px; */
     
 }
 
