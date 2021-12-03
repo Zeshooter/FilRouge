@@ -4,12 +4,13 @@
     padding : 0px;
 }
 
-header {
-    display : flex;
-}
-
 body{
     background-color: #FFF1E6;
+}
+
+header {
+    display : flex;
+    width: 100%;
 }
 
 /* logo Positivum */
@@ -32,23 +33,36 @@ img[src="./Logo.jpg"]:hover {
 
 #p1{
     font-size: 1vw;
-    margin-left :-3vw;
+    margin-left :-3.5vw;
     margin-top:0.2vw; 
 }
 
 #centre_header{
     display:flex;
     flex-direction: column;
+    width: 100%;
 }
 #p2{
     font-size: 1vw;
-    margin-left:-2vw;
+    margin-left:-1.5vw;
 }
+
+#head_header {
+    display : flex;
+    width: 100%;
+}
+
+
 /* Boutons d'inscription et de conenxion */
 #connexion {
-    /* position:absolute;
-    top:10px;
-    left:600px; */
+    align-self: center;
+    margin-left : 3vw;
+}
+
+/* Barre de navigation */
+
+#searchbar {
+    
 }
 /* Design de tous les boutons du site */
 /* .boutonstyle{
@@ -78,16 +92,11 @@ img[src="./Logo.jpg"]:hover {
     inset 2px 2px 3px rgba(0, 0, 0, .6);
 } */
 
-/* #searchbar {
-    position: absolute;
-    top : 60px;
-    left : 230px;
-    width: 33em;
-}
+
 
 #recherche {
     width: 80%;
-} */
+} 
 
 /* Menu de navigation */
 
