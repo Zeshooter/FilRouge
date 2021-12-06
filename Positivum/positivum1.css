@@ -83,10 +83,9 @@ img[src="./img/facebook.png"] {
     width :100%;
     background-color:#FFF1E6;
     height: 80%;
-    width: 100%;
     border:none;
     margin-left:0.5vw;
-    padding-left : 2vw;
+    padding-left : 0.5vw;
     font-family: 'dancing script';
     font-size:0.8vw;
     align-self: center;
