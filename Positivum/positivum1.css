@@ -110,7 +110,7 @@ img[src="./img/loupe.png"] {
 /* Design de tous les boutons du site */
 .boutonstyle{
 display:flex;
-background-color: #cb997e;
+background-color: #ddbea9;
 width : 4vw;
 height: 4vh;
 justify-content: center;
@@ -119,9 +119,16 @@ color : #FFF1E6;
 margin-right : 0.5vw;
 font-size:0.8vw;
 font-family: 'dancing script';
-{
+border: 3px #cb997e solid;
+border-radius : 30px;
+text-shadow: 1px 1px 3px white;
+cursor:pointer;
+transition: 1s;
+}
 
 .boutonstyle:hover {
+    transform:scale(1.2);
+    box-shadow:5px 5px 10px black;
 
 }
 
