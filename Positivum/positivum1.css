@@ -137,10 +137,16 @@ transition: 1s;
     inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
-
-
 /* Menu de navigation */
+}
+.menu {
+    display: flex;
+    margin-top : 1vh;
+}
 
+/* .sousmenu {
+    display : flex; */
+}
 /* #deroulant{
     position : relative;
     top : 100px;
