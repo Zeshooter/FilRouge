@@ -103,7 +103,7 @@ img[src="./img/loupe.png"] {
 }
 
 /* Design de tous les boutons du site */
-/* .boutonstyle{
+.boutonstyle{
     border: 0;
     line-height: 2.5;
     padding: 0 5px;
@@ -128,7 +128,7 @@ img[src="./img/loupe.png"] {
 .boutonstyle:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
     inset 2px 2px 3px rgba(0, 0, 0, .6);
-} */
+}
 
 
 
