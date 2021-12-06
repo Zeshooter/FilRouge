@@ -2,6 +2,9 @@
 *{
     margin : 0px;
     padding : 0px;
+    border:none;
+    text-decoration:none;
+
 }
 
 body{
@@ -55,8 +58,10 @@ img[src="./img/Logo.jpg"]:hover {
 
 /* Boutons d'inscription et de connexion */
 #connexion {
+    display : flex;
     align-self: center;
-    margin-left : 3vw;
+    justify-content: space-between;
+    
 }
 
 /* Image réseaux sociaux */
@@ -104,25 +109,20 @@ img[src="./img/loupe.png"] {
 
 /* Design de tous les boutons du site */
 .boutonstyle{
-    border: 0;
-    line-height: 2.5;
-    padding: 0 5px;
-    font-size: 0.7rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: #cb997e;
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
-}
+display:flex;
+background-color: #cb997e;
+width : 4vw;
+height: 4vh;
+justify-content: center;
+align-items: center;
+color : #FFF1E6;
+margin-right : 0.5vw;
+font-size:0.8vw;
+font-family: 'dancing script';
+{
 
 .boutonstyle:hover {
-    background-color: #ddbea9;
+
 }
 
 .boutonstyle:active {
