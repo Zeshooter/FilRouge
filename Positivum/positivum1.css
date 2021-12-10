@@ -5,7 +5,6 @@
     border:none;
     text-decoration:none;
     list-style-type: none;
-
 }
 
 body{
@@ -21,6 +20,7 @@ img[src="./img/Logo.jpg"] {
     margin-top: 1vw;
     margin-left: 1vw;
     height: 10vw;
+    border-radius:100%;
 }
 
 img[src="./img/Logo.jpg"]:hover {
@@ -76,7 +76,7 @@ img[src="./img/facebook.png"] {
     height: 3.6vw;
     padding : 0vw;
 }
-/* Barre de navigation */
+/* Barre de recherche */
 #searchbar{
     display: flex;
     border:#cb997e 2px solid;
@@ -109,6 +109,10 @@ img[src="./img/loupe.png"] {
 }
 
 /* Design de tous les boutons du site */
+a, li{
+    color:#FFF1E6;
+} 
+
 .boutonstyle{
 display:flex;
 background-color: #ddbea9;
@@ -118,7 +122,7 @@ justify-content: center;
 align-items: center;
 color : #FFF1E6;
 margin-right : 0.5vw;
-font-size:0.8vw;
+font-size:auto;
 font-family: 'dancing script';
 text-align: center;
 border: 3px #cb997e solid;
@@ -141,7 +145,7 @@ transition: 1s;
 
 /* Menu de navigation */
 
-nav{
+/* nav{
    width:100%;
     
 }
@@ -160,7 +164,7 @@ nav{
 .sousmenu{
     display:flex;
     flex-direction: column;
-}
+} */
 
 
 
