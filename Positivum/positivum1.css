@@ -109,7 +109,7 @@ img[src="./img/loupe.png"] {
 }
 
 /* Design de tous les boutons du site */
-a, li{
+a, li, a:hover, li:hover, a:visited, li:visited{
     color:#FFF1E6;
 } 
 
