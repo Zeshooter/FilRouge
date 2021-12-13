@@ -116,12 +116,13 @@ a, li, a:hover, li:hover, a:visited, li:visited{
 .boutonstyle{
 display:flex;
 background-color: #ddbea9;
-width : 4vw;
-height: 4vh;
+width : 8vw;
+height: 5vh;
 justify-content: center;
 align-items: center;
 color : #FFF1E6;
 margin-right : 0.5vw;
+margin-top: 0.5vw;
 font-size:auto;
 font-family: 'dancing script';
 text-align: center;
@@ -135,7 +136,8 @@ transition: 1s;
 .boutonstyle:hover {
     transform:scale(1.2);
     box-shadow:5px 5px 10px black;
-
+    color:#FFF1E6;
+    background-color: #ddbea9;
 }
 
 .boutonstyle:active {
@@ -145,26 +147,10 @@ transition: 1s;
 
 /* Menu de navigation */
 
-/* nav{
-   width:100%;
-    
-}
-.menu {
+#navbar {
     display: flex;
-    margin-top : 1vh;
+    justify-content: space-between;
 }
-
-#menu{
-    display: flex;
-}
-
-.deroulant{
-    flex:1 1 auto;
-}
-.sousmenu{
-    display:flex;
-    flex-direction: column;
-} */
 
 
 
