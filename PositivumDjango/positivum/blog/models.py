@@ -1,3 +1,4 @@
+from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
@@ -17,7 +18,7 @@ class professionnel(models.Model):
     nom_professionnel = models.CharField(max_length=50)
     date_naissance_professionnel = models.DateField(null=True, blank=True)
     resume_carriere_professionnel = models.TextField(blank=True)
-    photo_professionnel = models.CharField(max_length=254, blank=True)
+    photo_professionnel = models.ImageField(upload_to='photo_pro', blank=True)
     type_professionnel = models.ForeignKey(type_professionnel, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -48,8 +49,8 @@ class citation(models.Model):
 class oeuvre(models.Model):
     nom_oeuvre = models.CharField(max_length=100)
     synopsis_oeuvre = models.TextField(blank=True)
-    visuel_oeuvre = models.CharField(max_length=254, blank=True)
-    video_oeuvre = models.CharField(max_length=254, blank=True)
+    visuel_oeuvre = models.ImageField(upload_to="visuel_oeuvre", blank=True)
+    video_oeuvre = models.FileField(upload_to='videos_oeuvre', null=True, validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
     categorie_oeuvre = models.ForeignKey(categorie_oeuvre, on_delete=models.CASCADE)
     type_oeuvre = models.ForeignKey(type_oeuvre, on_delete=models.CASCADE)
     professionnel = models.ManyToManyField(professionnel, blank=True)
@@ -60,6 +61,7 @@ class oeuvre(models.Model):
 
 class emotion(models.Model):
     nom_emotion = models.CharField(max_length=50)
+    visuel_emotion = models.ImageField(upload_to="emotion", blank=True)
     definition_emotion = models.TextField(blank=True)
 
     def __str__(self):
@@ -68,6 +70,7 @@ class emotion(models.Model):
 class article(models.Model):
     date_article = models.DateField(default=date.today, null=True)
     titre_article = models.CharField(max_length=50)
+    visuel_article = models.ImageField(upload_to="visuel_article", blank=True)
     corps_article = models.TextField(blank=True)
     utilisateur = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     citer = models.ManyToManyField(citation, blank=True)
@@ -94,6 +97,7 @@ class type_evenement(models.Model):
 
 class evenement(models.Model):
     titre_evenement = models.CharField(max_length=100)
+    visuel_evenement = models.ImageField(upload_to="visuel_evenement")
     description_evenement = models.TextField(blank=True)
     date_heure_evenement = models.DateTimeField(auto_now_add=True, blank=False, null=True)
     lieu_evenement = models.CharField(max_length=100)
@@ -119,7 +123,7 @@ class videotheque(models.Model):
         return self.nom_videotheque
 
 class avatar(models.Model):
-    visuel_avatar = models.CharField(max_length=100)
+    visuel_avatar = models.ImageField(upload_to="visuel_avatar")
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
