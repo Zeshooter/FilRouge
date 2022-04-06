@@ -9,6 +9,8 @@
 
 body{
     background-color: #FFF1E6;
+    display : flex;
+    justify-content : center;
 }
 
 header {
@@ -16,23 +18,30 @@ header {
 }
 
 /* logo Positivum */
-img[src="./img/Logo.jpg"] {
-    margin-top: 1vw;
-    margin-left: 1vw;
+#logo {
+    /*margin-top: 1vw;
+    margin-left: 1vw;*/
     height: 10vw;
     border-radius:100%;
 }
 
-img[src="./img/Logo.jpg"]:hover {
+#logo:hover {
     transition : 0.5s;
     transform: scale(1.5);
     cursor:pointer;
+}
+/* Le haut du header comprenant : Le slogan + la barre de recherche +les boutons de connexion */
+#head_header {
+    display : flex;
+    justify-content: space-evenly;
 }
 
 /* Slogan */
 #slogan{
     font-family: 'Dancing Script';
-    margin-right : 50vw;
+ /*   margin-right : 50vw;*/
+    height: 10vw;
+    width: 10vw;
 }
 
 #p1{
@@ -49,12 +58,10 @@ img[src="./img/Logo.jpg"]:hover {
 #centre_header{
     display:flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 
-#head_header {
-    display : flex;
-}
 
 
 /* Boutons d'inscription et de connexion */
@@ -66,16 +73,16 @@ img[src="./img/Logo.jpg"]:hover {
 }
 
 /* Image réseaux sociaux */
-img[src="./img/instagram.png"], img[src="./img/twitter.png"] {
+.ressoc {
     height: 3vw;
     padding-top : 0.3vw;
     padding-right:0.2vw;
 }
 
-img[src="./img/facebook.png"] {
+/*img[src="/blog/img/facebook.png"] {
     height: 3.6vw;
     padding : 0vw;
-}
+}*/
 /* Barre de recherche */
 #searchbar{
     display: flex;
@@ -95,16 +102,15 @@ img[src="./img/facebook.png"] {
     font-family: 'dancing script';
     font-size:0.8vw;
     align-self: center;
-    
 }
 
 #recherche:focus{
     outline:none;
 }
 /* image de la loupe sur la barre de recherche */
-img[src="./img/loupe.png"] {
+#loupe {
     height : 1.4vh;
-    padding-top: 0.2vw;
+ /*   padding-top: 0.2vw;*/
     margin-right:0.5vw;
 }
 

@@ -1,0 +1,172 @@
+<!-- maj 031221 -->
+<!DOCTYPE html>
+{% load static %}
+<html>
+    
+<head>
+    <meta charset="utf-8" />
+    <title>Positivum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'blog/positivum1.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/x-icon" href="{% static 'blog/img/logo.jpg' %}">
+<!-- <link rel="stylesheet" type="text/class" href="Bootstrap/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+    <header>
+
+        <a href="./index.html"><img src="{% static 'blog/img/logo.jpg' %}" id="logo" alt="Logo" title="Positivum"></a>
+        
+        <!-- centre du header comprenant : Le logo + la barre de recherche + la barre de navigation  -->
+        <section id="centre_header">
+            
+            <!-- Le haut du header comprenant : Le slogan + la barre de recherche +les boutons de connexion -->
+            <div id=head_header>
+                <div id="slogan">
+                    <p id="p1">Partager vos émotions positives</p>
+                    <p id="p2">Positive Lifestyle Only</p>
+                </div>
+
+                <!-- Formulaire barre de recherche : ne fonctionne pas pour l'instant -->
+            <form action="mapage" method="post">
+
+                <div id="searchbar">
+                    <input type="search" id="recherche" nom="barre" placeholder="Rechercher sur le site" >
+                    <a href="https://www.google.fr" target="_blank"><img src="{% static 'blog/img/loupe.png' %}" id="loupe" alt="loupe"></a>
+                </div>
+            </form>
+                        
+                <!-- Boutons d'inscriptions et de connexion : ne mène à rien pour l'instant -->
+                <DIV id="connexion">
+                <a href="https://www.google.fr" target="_blank"><button type="button" class="boutonstyle" name="inscription">S'inscrire</button></a>
+                <button type="button" class="boutonstyle" name=connexion>Connexion</button>
+                </DIV>
+            </div>  
+
+
+
+            <!-- Menu de navigation -->
+            
+            <nav id="navbar" class="navbar navbar-expand-md justify-content-center">
+                <ul class="navbar-nav" id="menu" class="menu">
+                    <li class="nav-item-active">
+                        <a class="boutonstyle nav-link" href="./index.html">Accueil</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Films</a>
+                            <ul class="dropdown-menu border-0 bg-transparent">
+                                <li>
+                                   <a class="boutonstyle dropdown-item" href="#">Drame</a>
+                                </li>
+                                    <a class="boutonstyle dropdown-item" href="#">SF</a>
+                                <li>
+                                    <a class="boutonstyle dropdown-item" href="#">Comédie</a>
+                                </li>
+                                <li>
+                                    <a class="boutonstyle dropdown-item" href="#">Romance</a>
+                                </li>
+                                <li>
+                                    <a class="boutonstyle dropdown-item" href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a class="boutonstyle dropdown-item" href="#">SF</a>
+                                </li>
+                            </ul>
+                    </li>    
+                    <li class="nav-item dropdown">
+                        <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Séries</a>
+                        <ul class="dropdown-menu border-0 bg-transparent">
+                            <li>
+                               <a class="boutonstyle dropdown-item" href="#">Drame</a>
+                            </li>
+                                <a class="boutonstyle dropdown-item" href="#">SF</a>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Comédie</a>
+                            </li>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Romance</a>
+                            </li>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">SF</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Artisans</a>
+                        <ul class="dropdown-menu border-0 bg-transparent">
+                            <li>
+                               <a class="boutonstyle dropdown-item" href="#">Acteurs</a>
+                            </li>
+                                <a class="boutonstyle dropdown-item" href="#">Réalisateurs</a>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Musiciens</a>
+                            </li>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Photographes</a>
+                            </li>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Ingénieurs-son</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Emotions</a>
+                        <ul class="dropdown-menu border-0 bg-transparent">
+                            <li>
+                               <a class="boutonstyle dropdown-item" href="#">Joie</a>
+                            </li>
+                                <a class="boutonstyle dropdown-item" href="#">Tristesse</a>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Surprise</a>
+                            </li>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Colère</a>
+                            </li>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Peur</a>
+                            </li>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Dégoût</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Evénements</a>
+                        <ul class="dropdown-menu border-0 bg-transparent">
+                            <li>
+                               <a class="boutonstyle dropdown-item" href="#">Avant-première</a>
+                            </li>
+                                <a class="boutonstyle dropdown-item" href="#">Festival</a>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Cérémonie</a>
+                            </li>
+                            <li>
+                                <a class="boutonstyle dropdown-item" href="#">Rassemblons-Nous</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <!-- <section id="social_network"> -->
+            <a href="https://fr-fr.facebook.com/"><img src="{% static 'blog/img/facebook.png' %}" class="ressoc" alt="facebook" name="facebook"></a>
+            <a href="https://www.instagram.com/"><img src="{% static 'blog/img/instagram.png' %}" class="ressoc" alt="instagram" name="instagram"></a>
+            <a href="https://twitter.com/"><img src="{% static 'blog/img/twitter.png' %}" class="ressoc" alt="twitter" name="twitter"></a>
+
+        <!-- </section> -->
+    </header>
+
+<!-- script Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+
+</body>
