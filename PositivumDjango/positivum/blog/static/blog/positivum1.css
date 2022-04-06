@@ -182,10 +182,6 @@ transition: 1s;
     left: 0px;
     z-index: 0;
 }
-.cb-slideshow:after {
-    content: '';
-    background: transparent url(../images/pattern.png) repeat top left;
-}
 
 .cb-slideshow li span {
     width: 100%;
@@ -220,27 +216,26 @@ transition: 1s;
 }
 
 .cb-slideshow li:nth-child(1) span {
-    background-image: url()
+    background-image: url('../blog/img/star.jpg')
 }
 .cb-slideshow li:nth-child(2) span {
-    /*background-image: url('https://thumbs2.imgbox.com/dd/a8/NNCNujlD_t.jpeg');*/
     background-image: url('../blog/img/cinema.jpeg');
     animation-delay: 6s;
 }
 .cb-slideshow li:nth-child(3) span {
-    background-image: url(../images/3.jpg);
+    background-image: url('../blog/img/matrix.jpg');
     animation-delay: 12s;
 }
 .cb-slideshow li:nth-child(4) span {
-    background-image: url(../images/4.jpg);
+    background-image: url('../blog/img/scream.jpg');
     animation-delay: 18s;
 }
 .cb-slideshow li:nth-child(5) span {
-    background-image: url(../images/5.jpg);
+    background-image: url('../blog/img/silence.jpg');
     animation-delay: 24s;
 }
 .cb-slideshow li:nth-child(6) span {
-    background-image: url(../images/6.jpg);
+    background-image: url('../blog/img/james.jpg');
     animation-delay: 30s;
 }
 
