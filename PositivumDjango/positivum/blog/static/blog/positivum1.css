@@ -1,9 +1,11 @@
-/* MAJ 031221 */
+:root{
+--couleur-fond: #FFF1E6
+}
 *{
     margin : 0px;
     padding : 0px;
-    border:none;
-    text-decoration:none;
+    border: none;
+    text-decoration: none;
     list-style-type: none;
 }
 
@@ -14,10 +16,9 @@ body{
 
 header {
     display : flex;
-    background-color: #FFF1E6;
+    background-color: var(--couleur-fond);
     margin-top: 5vh;
     border-radius : 10px 10px;
-    /*position : absolute;*/
     z-index : 10;
 }
 
@@ -38,18 +39,19 @@ header {
     transform: scale(1.5);
     cursor:pointer;
 }
+
 /*<!-- centre du header comprenant : Le slogan + la barre de recherche + la barre de navigation  -->*//**/
 #centre_header{
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-
 }
-/* Le haut du header comprenant : Le slogan + la barre de recherche +les boutons de connexion */
+
+/* Le haut du header comprenant : Le slogan + la barre de recherche + les boutons de connexion */
 #head_header {
     display : flex;
     justify-content: space-evenly;
-    height: 13vh;
+    height: 8vh;
 }
 
 /* Slogan */
@@ -57,21 +59,33 @@ header {
     display : flex;
     flex-direction : column;
     font-family: 'Dancing Script';
-    font-size : 1.2vw;
+    font-size : auto;
     text-align: center;
-    padding-top : 3vw;
+    padding-top : 0.5vw;
     height: 10vw;
     width: 10vw;
 }
 
-#p1{
-    transform: rotate(-30deg);
-    transition : 2s;
+/*Animation du slogan*/
+#slogan{
+    animation-duration : 3s;
+    animation-name: p1dezoom;
 }
 
+@keyframes p1dezoom{
+    from {
+    font-size: 50vw;
+    }
+    50% {
+    transform: rotate(-30deg);
+    }
+    to {
+    transform: rotate(30deg);
+    font-size: 1.2vw;
+    }
+}
 #p2{
     font-size: 1.2vw;
-    /*margin-left:-1.7vw;*/
 }
 
 /* Boutons d'inscription et de connexion */
@@ -90,7 +104,7 @@ header {
 /* Image réseaux sociaux */
 .ressoc {
     height: 3vw;
-    padding-right:0.2vw;
+    padding-right: 0.2vw;
     margin: 0.2vw;
 }
 /* Barre de recherche */
@@ -113,14 +127,14 @@ header {
 }
 
 #recherche {
-    width :100%;
-    background-color:#FFF1E6;
+    width: 100%;
+    background-color: var(--couleur-fond);
     height: 70%;
-    border:none;
-    margin-left:0.5vw;
+    border: none;
+    margin-left: 0.5vw;
     padding-left : 0.5vw;
     font-family: 'dancing script';
-    font-size:1.9vw;
+    font-size: 1.9vw;
     align-self: center;
 }
 
@@ -136,7 +150,7 @@ header {
 
 /* Design de tous les boutons du site */
 a, li, a:hover, li:hover, a:visited, li:visited{
-    color:#FFF1E6;
+    color:var(--couleur-fond);
 } 
 
 .boutonstyle{
@@ -146,7 +160,7 @@ width : 8vw;
 height: 5vh;
 justify-content: center;
 align-items: center;
-color : #FFF1E6;
+color : var(--couleur-fond);
 margin-right : 0.5vw;
 margin-top: 0.5vw;
 font-size: auto;
@@ -162,7 +176,7 @@ transition: 1s;
 .boutonstyle:hover {
     transform:scale(1.2);
     box-shadow:5px 5px 10px black;
-    color:#FFF1E6;
+    color: var(--couleur-fond);
     background-color: #ddbea9;
 }
 
@@ -171,10 +185,18 @@ transition: 1s;
     inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
+#fond {
+background-color:
+}
+
+
+
+
+
+
     /*background slideshow*/
 
-    .cb-slideshow,
-.cb-slideshow:after {
+    .cb-slideshow, .cb-slideshow:after {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -210,7 +232,7 @@ transition: 1s;
 }
 .cb-slideshow li div h3 {
     font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-    font-size: 240px;
+    font-size: 160px;
     padding: 0;
     line-height: 200px;
 }
@@ -227,11 +249,11 @@ transition: 1s;
     animation-delay: 12s;
 }
 .cb-slideshow li:nth-child(4) span {
-    background-image: url('../blog/img/scream.jpg');
+    background-image: url('../blog/img/jurassic.jpg');
     animation-delay: 18s;
 }
 .cb-slideshow li:nth-child(5) span {
-    background-image: url('../blog/img/silence.jpg');
+    background-image: url('../blog/img/delorean.jpg');
     animation-delay: 24s;
 }
 .cb-slideshow li:nth-child(6) span {
