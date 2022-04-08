@@ -2,6 +2,7 @@
 --couleur-fond: #FFF1E6;
 --font : 'Lobster';
 }
+
 *{
     margin : 0px;
     padding : 0px;
@@ -16,6 +17,14 @@ body{
     height: 100%;
 }
 
+#global {
+    width: 100%;
+    display: flex;
+    z-index: 9;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
     width: 80%;
     justify-content: space-around;
@@ -25,6 +34,19 @@ header {
     border-radius : 10px 10px;
     z-index : 9;
 }
+
+#contenu {
+    width: 80%;
+    justify-content: space-around;
+    display : flex;
+    background-color: var(--couleur-fond);
+    margin-top: 5vh;
+    border-radius : 10px 10px;
+    z-index : 9;
+}
+
+
+
 
 /* logo Positivum */
 

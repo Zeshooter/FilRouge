@@ -19,154 +19,158 @@
 </head>
 
 <body>
-    <header>
+    <div id="global">
+        <header>
         <!--        box contenant l'image du logo-->
 
-        <a href="./index.html" id="logobox"><img src="{% static 'blog/img/logo.jpg' %}" id="logo" alt="Logo" title="Positivum"></a>
+            <a href="./index.html" id="logobox"><img src="{% static 'blog/img/logo.jpg' %}" id="logo" alt="Logo" title="Positivum"></a>
 
         <!-- centre du header comprenant : Le slogan + la barre de recherche + la barre de navigation  -->
-        <section id="centre_header">
+            <section id="centre_header">
 
             <!-- Le haut du header comprenant : Le slogan + la barre de recherche + les boutons de connexion -->
-            <div id=head_header>
-                <div id="slogan">
-                    <p id="p1">Partager vos émotions positives</p>
-                    <p id="p2">Positive Lifestyle Only</p>
-                </div>
+                <div id=head_header>
+                    <div id="slogan">
+                        <p id="p1">Partager vos émotions positives</p>
+                        <p id="p2">Positive Lifestyle Only</p>
+                    </div>
 
                 <!-- Formulaire barre de recherche : ne fonctionne pas pour l'instant -->
-                <form id="searchbar"action="mapage" method="post">
-                    <div id="searchbar1">
-                        <input type="search" id="recherche" nom="barre" placeholder="Rechercher sur le site" >
-                        <a href="https://www.google.fr" target="_blank"><img src="{% static 'blog/img/loupe.png' %}" id="loupe" alt="loupe"></a>
-                    </div>
-                </form>
+                    <form id="searchbar"action="mapage" method="post">
+                        <div id="searchbar1">
+                            <input type="search" id="recherche" nom="barre" placeholder="Rechercher sur le site" >
+                            <a href="https://www.google.fr" target="_blank"><img src="{% static 'blog/img/loupe.png' %}" id="loupe" alt="loupe"></a>
+                        </div>
+                    </form>
                         
                 <!-- Boutons d'inscriptions et de connexion : ne mène à rien pour l'instant -->
-                <div id="connexion">
-                    <a href="https://www.google.fr" target="_blank"><button type="button" class="boutonstyle" name="inscription">S'inscrire</button></a>
-                    <button type="button" class="boutonstyle" name=connexion>Connexion</button>
+                    <div id="connexion">
+                        <a href="https://www.google.fr" target="_blank"><button type="button" class="boutonstyle" name="inscription">S'inscrire</button></a>
+                        <button type="button" class="boutonstyle" name=connexion>Connexion</button>
+                    </div>
                 </div>
-            </div>  
 
 
 
             <!-- Menu de navigation -->
-            <div id=bottom_header>
-            <nav id="navbar" class="navbar navbar-expand-md justify-content-center">
-                <ul class="navbar-nav" id="menu" class="menu">
-                    <li class="nav-item-active">
-                        <a class="boutonstyle nav-link" href="#">Accueil</a>
-                    </li>
+                <div id=bottom_header>
+                    <nav id="navbar" class="navbar navbar-expand-md justify-content-center">
+                        <ul class="navbar-nav" id="menu" class="menu">
+                            <li class="nav-item-active">
+                                <a class="boutonstyle nav-link" href="#">Accueil</a>
+                            </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Films</a>
-                            <ul class="dropdown-menu border-0 bg-transparent">
-                                <li>
-                                   <a class="boutonstyle dropdown-item" href="#">Drame</a>
-                                </li>
-                                    <a class="boutonstyle dropdown-item" href="#">SF</a>
-                                <li>
-                                    <a class="boutonstyle dropdown-item" href="#">Comédie</a>
-                                </li>
-                                <li>
-                                    <a class="boutonstyle dropdown-item" href="#">Romance</a>
-                                </li>
-                                <li>
-                                    <a class="boutonstyle dropdown-item" href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a class="boutonstyle dropdown-item" href="#">SF</a>
-                                </li>
-                            </ul>
-                    </li>    
-                    <li class="nav-item dropdown">
-                        <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Séries</a>
-                        <ul class="dropdown-menu border-0 bg-transparent">
-                            <li>
-                               <a class="boutonstyle dropdown-item" href="#">Drame</a>
+                            <li class="nav-item dropdown">
+                                <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Films</a>
+                                    <ul class="dropdown-menu border-0 bg-transparent">
+                                        <li>
+                                           <a class="boutonstyle dropdown-item" href="#">Drame</a>
+                                        </li>
+                                            <a class="boutonstyle dropdown-item" href="#">SF</a>
+                                        <li>
+                                            <a class="boutonstyle dropdown-item" href="#">Comédie</a>
+                                        </li>
+                                        <li>
+                                            <a class="boutonstyle dropdown-item" href="#">Romance</a>
+                                        </li>
+                                        <li>
+                                            <a class="boutonstyle dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li>
+                                            <a class="boutonstyle dropdown-item" href="#">SF</a>
+                                        </li>
+                                    </ul>
                             </li>
-                                <a class="boutonstyle dropdown-item" href="#">SF</a>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Comédie</a>
+                            <li class="nav-item dropdown">
+                                <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Séries</a>
+                                <ul class="dropdown-menu border-0 bg-transparent">
+                                    <li>
+                                       <a class="boutonstyle dropdown-item" href="#">Drame</a>
+                                    </li>
+                                        <a class="boutonstyle dropdown-item" href="#">SF</a>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Comédie</a>
+                                    </li>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Romance</a>
+                                    </li>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">SF</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Romance</a>
+                            <li class="nav-item dropdown">
+                                <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Artisans</a>
+                                <ul class="dropdown-menu border-0 bg-transparent">
+                                    <li>
+                                       <a class="boutonstyle dropdown-item" href="#">Acteurs</a>
+                                    </li>
+                                        <a class="boutonstyle dropdown-item" href="#">Réalisateurs</a>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Musiciens</a>
+                                    </li>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Photographes</a>
+                                    </li>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Ingénieurs-son</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Action</a>
+                            <li class="nav-item dropdown">
+                                <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Emotions</a>
+                                <ul class="dropdown-menu border-0 bg-transparent">
+                                    <li>
+                                       <a class="boutonstyle dropdown-item" href="#">Joie</a>
+                                    </li>
+                                        <a class="boutonstyle dropdown-item" href="#">Tristesse</a>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Surprise</a>
+                                    </li>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Colère</a>
+                                    </li>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Peur</a>
+                                    </li>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Dégoût</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">SF</a>
+                            <li class="nav-item dropdown">
+                                <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Evénements</a>
+                                <ul class="dropdown-menu border-0 bg-transparent">
+                                    <li>
+                                       <a class="boutonstyle dropdown-item" href="#">Avant-première</a>
+                                    </li>
+                                        <a class="boutonstyle dropdown-item" href="#">Festival</a>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Cérémonie</a>
+                                    </li>
+                                    <li>
+                                        <a class="boutonstyle dropdown-item" href="#">Rassemblons-Nous</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Artisans</a>
-                        <ul class="dropdown-menu border-0 bg-transparent">
-                            <li>
-                               <a class="boutonstyle dropdown-item" href="#">Acteurs</a>
-                            </li>
-                                <a class="boutonstyle dropdown-item" href="#">Réalisateurs</a>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Musiciens</a>
-                            </li>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Photographes</a>
-                            </li>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Ingénieurs-son</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Emotions</a>
-                        <ul class="dropdown-menu border-0 bg-transparent">
-                            <li>
-                               <a class="boutonstyle dropdown-item" href="#">Joie</a>
-                            </li>
-                                <a class="boutonstyle dropdown-item" href="#">Tristesse</a>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Surprise</a>
-                            </li>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Colère</a>
-                            </li>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Peur</a>
-                            </li>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Dégoût</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="boutonstyle nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Evénements</a>
-                        <ul class="dropdown-menu border-0 bg-transparent">
-                            <li>
-                               <a class="boutonstyle dropdown-item" href="#">Avant-première</a>
-                            </li>
-                                <a class="boutonstyle dropdown-item" href="#">Festival</a>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Cérémonie</a>
-                            </li>
-                            <li>
-                                <a class="boutonstyle dropdown-item" href="#">Rassemblons-Nous</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+                    </nav>
+                </div>
+            </section>
+
+            <span id="res_soc">
+                <a href="https://fr-fr.facebook.com/"><img src="{% static 'blog/img/facebook.png' %}" class="ressoc" alt="facebook" name="facebook"></a>
+                <a href="https://www.instagram.com/"><img src="{% static 'blog/img/instagram.png' %}" class="ressoc" alt="instagram" name="instagram"></a>
+                <a href="https://twitter.com/"><img src="{% static 'blog/img/twitter.png' %}" class="ressoc" alt="twitter" name="twitter"></a>
+            </span>
+        </header>
+        <div id="contenu">
+            <p>test</p>
         </div>
-        </section>
-
-        <span id="res_soc">
-            <a href="https://fr-fr.facebook.com/"><img src="{% static 'blog/img/facebook.png' %}" class="ressoc" alt="facebook" name="facebook"></a>
-            <a href="https://www.instagram.com/"><img src="{% static 'blog/img/instagram.png' %}" class="ressoc" alt="instagram" name="instagram"></a>
-            <a href="https://twitter.com/"><img src="{% static 'blog/img/twitter.png' %}" class="ressoc" alt="twitter" name="twitter"></a>
-        </span>
-    </header>
-
+    </div>
 
 
     <!--background slideshow-->
