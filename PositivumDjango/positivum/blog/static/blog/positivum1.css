@@ -40,9 +40,9 @@ header {
     justify-content: space-around;
     display : flex;
     background-color: var(--couleur-fond);
-    margin-top: 5vh;
+    margin-top: 0.8vh;
     border-radius : 10px 10px;
-    z-index : 9;
+    z-index : 2;
 }
 
 
