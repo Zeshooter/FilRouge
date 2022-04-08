@@ -1,5 +1,6 @@
 :root{
---couleur-fond: #FFF1E6
+--couleur-fond: #FFF1E6;
+--font : 'Lobster';
 }
 *{
     margin : 0px;
@@ -12,14 +13,17 @@
 body{
     display : flex;
     justify-content : center;
+    height: 100%;
 }
 
 header {
+    width: 80%;
+    justify-content: space-around;
     display : flex;
     background-color: var(--couleur-fond);
     margin-top: 5vh;
     border-radius : 10px 10px;
-    z-index : 10;
+    z-index : 9;
 }
 
 /* logo Positivum */
@@ -56,37 +60,49 @@ header {
 
 /* Slogan */
 #slogan{
+    z-index: 8;
     display : flex;
     flex-direction : column;
-    font-family: 'Dancing Script';
-    font-size : auto;
+    font-family: var(--font);
+    font-size : 120%;
     text-align: center;
     padding-top : 0.5vw;
-    height: 10vw;
+    height: 10vh;
     width: 10vw;
+    margin-left: -4vw;
+    margin-right: 1vw;
+    animation-duration : 5s;
+    animation-name: slogan_zoom;
+}
+#p1{
+    margin-bottom: 0.5rem;
+    width: max-content;
 }
 
-/*Animation du slogan*/
-#slogan{
-    animation-duration : 3s;
-    animation-name: p1dezoom;
-}
+#p2 {
+    margin-left: 1.3rem;
+    width: max-content;
+    margin-bottom: 0.5rem;
+    }
+/*Animation du slogan*//*
 
-@keyframes p1dezoom{
+@keyframes slogan_zoom{
     from {
-    font-size: 50vw;
+    font-size: 30%;
     }
+ *//*   25%{
+    font-size: 60%;
+    }*//*
     50% {
-    transform: rotate(-30deg);
+    font-size: 110%;
     }
+*//*    75%{
+    font-size: 100%;
+    }*//*
     to {
-    transform: rotate(30deg);
-    font-size: 1.2vw;
+    font-size: 80%;
     }
-}
-#p2{
-    font-size: 1.2vw;
-}
+}*/
 
 /* Boutons d'inscription et de connexion */
 #connexion {
@@ -133,19 +149,28 @@ header {
     border: none;
     margin-left: 0.5vw;
     padding-left : 0.5vw;
-    font-family: 'dancing script';
+    font-family: var(--font);
     font-size: 1.9vw;
     align-self: center;
 }
 
 #recherche:focus{
-    outline:none;
+    outline: none;
 }
 /* image de la loupe sur la barre de recherche */
 #loupe {
     height : 2vh;
     margin-top: 1vw;
     margin-right:0.5vw;
+}
+
+.fond {
+display: flex;
+justify-content: center;
+background-color: var(--couleur-fond);
+height: 100%;
+width: 100%;
+z-index: 9;
 }
 
 /* Design de tous les boutons du site */
@@ -163,19 +188,19 @@ align-items: center;
 color : var(--couleur-fond);
 margin-right : 0.5vw;
 margin-top: 0.5vw;
-font-size: auto;
-font-family: 'dancing script';
+font-size: 100%;
+font-family: var(--font);
 text-align: center;
 border: 3px #cb997e solid;
 border-radius : 30px;
-text-shadow: 1px 1px 3px white;
+text-shadow: 1px 1px 3px #842029;
 cursor:pointer;
 transition: 1s;
 }
 
 .boutonstyle:hover {
-    transform:scale(1.2);
-    box-shadow:5px 5px 10px black;
+    transform: scale(1.2);
+    box-shadow: 5px 5px 10px black;
     color: var(--couleur-fond);
     background-color: #ddbea9;
 }
@@ -184,15 +209,6 @@ transition: 1s;
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
     inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
-
-#fond {
-background-color:
-}
-
-
-
-
-
 
     /*background slideshow*/
 
@@ -231,7 +247,7 @@ background-color:
     animation: titleAnimation 36s linear infinite 0s;
 }
 .cb-slideshow li div h3 {
-    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--font);
     font-size: 160px;
     padding: 0;
     line-height: 200px;
