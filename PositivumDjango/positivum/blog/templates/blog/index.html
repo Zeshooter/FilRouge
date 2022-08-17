@@ -168,7 +168,9 @@
             </span>
         </header>
         <div id="contenu">
-            <p>test</p>
+            {% for i in oeuvres %}
+            <p>{{ i.nom_oeuvre }}</p></br>
+            {% endfor %}
         </div>
     </div>
 
