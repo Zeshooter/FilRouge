@@ -2,7 +2,7 @@ from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
-from datetime import *
+from datetime import datetime
 
 # Create your models here.
 
@@ -32,7 +32,6 @@ class type_oeuvre(models.Model):
         return self.nom_type_oeuvre
 
 # ex : Comédie, sf, Action, Film d'auteur etc
-
 class categorie_oeuvre(models.Model):
     nom_categorie_oeuvre = models.CharField(max_length=50, blank=False)
 
@@ -49,8 +48,8 @@ class citation(models.Model):
 class oeuvre(models.Model):
     nom_oeuvre = models.CharField(max_length=100)
     synopsis_oeuvre = models.TextField(blank=True)
-    visuel_oeuvre = models.ImageField(upload_to="visuel_oeuvre", blank=True)
-    video_oeuvre = models.FileField(upload_to='videos_oeuvre', null=True, validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
+    visuel_oeuvre = models.ImageField(upload_to='visuel_oeuvre', blank=True)
+    video_oeuvre = models.FileField(upload_to='videos_oeuvre', null=True, blank=True, validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
     categorie_oeuvre = models.ForeignKey(categorie_oeuvre, on_delete=models.CASCADE)
     type_oeuvre = models.ForeignKey(type_oeuvre, on_delete=models.CASCADE)
     professionnel = models.ManyToManyField(professionnel, blank=True)
@@ -68,11 +67,19 @@ class emotion(models.Model):
         return self.nom_emotion
 
 class article(models.Model):
-    date_article = models.DateField(default=date.today, null=True)
-    titre_article = models.CharField(max_length=50)
-    visuel_article = models.ImageField(upload_to="visuel_article", blank=True)
+    STATUS_CHOICES = (
+        ('brouillon', 'Brouillon'),
+        ('publié', 'Publié'),
+    )
+    titre_article = models.CharField(max_length=200)
+    slug_article = models.SlugField(max_length=200, null=True)
+    visuel_article = models.ImageField(upload_to="visuel_article", blank=True, null=True)
     corps_article = models.TextField(blank=True)
-    utilisateur = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    date_creation_article = models.DateTimeField(auto_now_add=True, null=True)
+    date_maj_article = models.DateTimeField(auto_now=True, null=True)
+    status_article = models.CharField(choices=STATUS_CHOICES, default='brouillon', max_length=10)
+    publish = models.DateTimeField(default=timezone.now())
+    auteur = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     citer = models.ManyToManyField(citation, blank=True)
     ressentir = models.ManyToManyField(emotion, blank=True)
     oeuvrer = models.ManyToManyField(oeuvre)
@@ -97,7 +104,7 @@ class type_evenement(models.Model):
 
 class evenement(models.Model):
     titre_evenement = models.CharField(max_length=100)
-    visuel_evenement = models.ImageField(upload_to="visuel_evenement")
+    visuel_evenement = models.ImageField(upload_to="visuel_evenement", null=True)
     description_evenement = models.TextField(blank=True)
     date_heure_evenement = models.DateTimeField(auto_now_add=True, blank=False, null=True)
     lieu_evenement = models.CharField(max_length=100)
