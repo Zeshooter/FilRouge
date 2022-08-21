@@ -172,6 +172,14 @@
             <p>{{ i.nom_oeuvre }}</p></br>
             {% endfor %}
         </div>
+        <div id="contenu">
+            <h2>Liste des articles</h2>
+    {% for article in articles%}
+        <h3>{{article.titre_article}}</h3>
+        <p>{{article.corps_article}}</p>
+        <p>Date de publication : {{article.date_creation_article}}</p>
+    {% endfor %}
+        </div>
     </div>
 
 

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste_Articles</title>
+</head>
+<body>
+    <h2>Liste des articles</h2>
+    {% for article in articles%}
+        <h3>{{article.titre_article}}</h3>
+        <p>{{article.corps_article}}</p>
+        <p>Date de publication : {{article.date_creation_article}}</p>
+    {% endfor %}
+</body>
+</html>
