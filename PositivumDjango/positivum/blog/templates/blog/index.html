@@ -168,16 +168,20 @@
             </span>
         </header>
         <div id="contenu">
-            {% for i in oeuvres %}
-            <p>{{ i.nom_oeuvre }}</p></br>
+            <h3>Les Oeuvres du jour qui vous ont le plus plu:</h3>
+            <h6>{% for i in oeuvres %}
+            <p><h6>{{ i.nom_oeuvre }}</h6></p></br>
             {% endfor %}
         </div>
         <div id="contenu">
             <h2>Liste des articles</h2>
+            <br><br><br>
     {% for article in articles%}
-        <h3>{{article.titre_article}}</h3>
+        <h3><a href="/{% url 'article_detail' article.slug_article %}/">{{article.titre_article}}</a></h3>
         <p>{{article.corps_article}}</p>
         <p>Date de publication : {{article.date_creation_article}}</p>
+        <button class="boutonstyle"><a href="/{% url 'article_detail' article.slug_article %}/">En savoir plus...</a></button>
+        <hr>
     {% endfor %}
         </div>
     </div>

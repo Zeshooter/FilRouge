@@ -1,23 +1,23 @@
 from django.contrib import admin
-from .models import signature, type_evenement, evenement, commentaire, article, emotion, videotheque, oeuvre, professionnel, type_professionnel, type_oeuvre, categorie_oeuvre, citation, avatar
+from .models import Signature, Type_evenement, Evenement, Commentaire, Article, Emotion, Videotheque, Oeuvre, Professionnel, Type_professionnel, Type_oeuvre, Categorie_oeuvre, Citation, Avatar
 
 # Register your models here.
-admin.site.register(signature)
-admin.site.register(type_oeuvre)
-admin.site.register(type_professionnel)
-admin.site.register(type_evenement)
-admin.site.register(emotion)
+admin.site.register(Signature)
+admin.site.register(Type_oeuvre)
+admin.site.register(Type_professionnel)
+admin.site.register(Type_evenement)
+admin.site.register(Emotion)
 # admin.site.register(article)
-admin.site.register(evenement)
-admin.site.register(commentaire)
-admin.site.register(videotheque)
-admin.site.register(oeuvre)
-admin.site.register(professionnel)
-admin.site.register(categorie_oeuvre)
-admin.site.register(citation)
-admin.site.register(avatar)
+admin.site.register(Evenement)
+admin.site.register(Commentaire)
+admin.site.register(Videotheque)
+admin.site.register(Oeuvre)
+admin.site.register(Professionnel)
+admin.site.register(Categorie_oeuvre)
+admin.site.register(Citation)
+admin.site.register(Avatar)
 
-@admin.register(article)
+@admin.register(Article)
 class articleadmin(admin.ModelAdmin):
     list_display = ('titre_article','status_article','date_creation_article','publish','auteur')
     prepopulated_fields = {'slug_article':('titre_article',)}

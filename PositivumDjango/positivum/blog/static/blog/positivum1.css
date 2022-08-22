@@ -1,5 +1,14 @@
 :root{
 --couleur-fond: #FFF1E6;
+--couleur1 : #cb997e;
+--couleur2 : #eddcd2;
+--couleur3 : #f0efeb;
+--couleur4 : #ddbea9;
+--couleur5 : #a5a58d;
+--couleur6 : #b7b7a4;
+
+
+
 --font : 'Lobster';
 }
 
@@ -40,14 +49,13 @@ header {
     width: 80%;
     justify-content: space-around;
     display : flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--couleur-fond);
     margin-top: 0.8vh;
     border-radius : 10px 10px;
     z-index : 2;
 }
-
-
-
 
 /* logo Positivum */
 
@@ -198,7 +206,7 @@ z-index: 9;
 
 /* Design de tous les boutons du site */
 a, li, a:hover, li:hover, a:visited, li:visited{
-    color:var(--couleur-fond);
+    color:var(--couleur6);
 } 
 
 .boutonstyle{
