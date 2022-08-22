@@ -1,19 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'blog/index.html' %}
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste_Articles</title>
 </head>
-<body>
-    <h2>Liste des articles</h2>
-    <br><br><br>
-    {% for article in articles%}
-        <h3>{{article.titre_article}}</h3>
-        <p>{{article.corps_article}}</p>
-        <p>Date de publication : {{article.date_creation_article}}</p>
-        <hr>
-    {% endfor %}
-</body>
-</html>
+{% block content %}
+<h3>Les dernières oeuvres dont ont parle :</h3>
+<h6>{% for i in oeuvres %}
+<p><h6>{{ i.nom_oeuvre }}</h6></p></br>
+{% endfor %}
+</div>
+
+<div id="contenu">
+<h2>Liste des articles</h2>
+<div class="container">
+    <div class="row justify-content-center">  
+            {% for article in articles%}
+                <div class="col-lg-4 mb-4">                        
+                    <div class="card bg-color" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ article.visuel_article }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="{% url 'blog:article_detail' article.slug_article %}">{{article.titre_article}}</a></h5>
+                                <p class="card-text">{{article.corps_article|truncatechars:100}}</p>
+                                <a href="{% url 'blog:article_detail' article.slug_article %}" class="btn btn-primary text-light border-light">En savoir plus</a>
+                            </div>
+                    </div>
+                </div>
+            {% endfor %}
+    </div>
+    {% include "blog/layout/paginator.html" with page=page_obj %}
+</div>
+{% endblock %}

@@ -22,7 +22,7 @@
         <header>
         <!--        box contenant l'image du logo-->
 
-            <a href="./index.html" id="logobox"><img src="{% static 'blog/img/logo.jpg' %}" id="logo" alt="Logo" title="Positivum"></a>
+            <a href="#" id="logobox"><img src="{% static 'blog/img/logo.jpg' %}" id="logo" alt="Logo" title="Positivum"></a>
 
         <!-- centre du header comprenant : Le slogan + la barre de recherche + la barre de navigation  -->
             <section id="centre_header">
@@ -167,23 +167,9 @@
             </span>
         </header>
         <div id="contenu">
-            <h3>Les dernières oeuvres dont ont parle :</h3>
-            <h6>{% for i in oeuvres %}
-            <p><h6>{{ i.nom_oeuvre }}</h6></p></br>
-            {% endfor %}
-        </div>
+        {% block content %}
         
-        <div id="contenu">
-        
-            <h2>Liste des articles</h2>
-            <br><br><br>
-    {% for article in articles%}
-        <h3><a href="{% url 'blog:article_detail' article.slug_article %}">{{article.titre_article}}</a></h3>
-        <p>{{article.corps_article}}</p>
-        <p>Date de publication : {{article.date_creation_article}}</p>
-        <button class="boutonstyle"><a href="{% url 'blog:article_detail' article.slug_article %}">En savoir plus...</a></button>
-        <hr>
-    {% endfor %}
+        {% endblock %}
         </div>
     </div>
 

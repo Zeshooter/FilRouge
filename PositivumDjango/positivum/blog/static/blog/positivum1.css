@@ -55,6 +55,48 @@ header {
     margin-top: 0.8vh;
     border-radius : 10px 10px;
     z-index : 2;
+    padding : 10px;
+}
+
+/* Changement de classe de Bootstrap pour l'adapter à la charte graphique du site */
+.pagination > li > a
+{
+    background-color: var(--couleur1);
+    color: var(--couleur-fond);
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: var(--couleur6);
+    background-color: var(--couleur-fond);
+    border-color: var(--couleur1);
+}
+
+.pagination > .active > a
+{
+    color: var(--couleur1);
+    background-color: var(--couleur-fond);
+    border: solid 1px var(--couleur-fond);
+}
+
+.pagination > .active > a:hover
+{
+    background-color: var(--couleur-fond);
+    border: solid 1px var(--couleur-fond);
+}
+.card {
+    background-color: var(--couleur1);
+}
+
+.btn {
+    background-color: var(--couleur6);
+}
+
+.btn:hover {
+    background-color: var(--couleur5);
 }
 
 /* logo Positivum */
