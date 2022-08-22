@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Oeuvre, Article
+
 # Create your views here.
 
 def index(request):
@@ -10,9 +11,5 @@ def index(request):
     return render(request, 'blog/index.html', {"oeuvres": oeuvres, 'articles': articles})
 
 def article_detail(request, slug: str):
-    try:
-        article = Article.objects.get(slug_article=slug)
-        print(article)
-    except Article.DoesNotExist:
-        raise("Cet article n'existe pas")
+    article = get_object_or_404(Article, slug_article=slug)
     return render(request, 'blog/articles/detail_article.html', {'article': article})

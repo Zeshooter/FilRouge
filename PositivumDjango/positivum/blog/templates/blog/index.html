@@ -1,4 +1,3 @@
-<!-- maj 031221 -->
 <!DOCTYPE html>
 {% load static %}
 <html>
@@ -168,19 +167,21 @@
             </span>
         </header>
         <div id="contenu">
-            <h3>Les Oeuvres du jour qui vous ont le plus plu:</h3>
+            <h3>Les dernières oeuvres dont ont parle :</h3>
             <h6>{% for i in oeuvres %}
             <p><h6>{{ i.nom_oeuvre }}</h6></p></br>
             {% endfor %}
         </div>
+        
         <div id="contenu">
+        
             <h2>Liste des articles</h2>
             <br><br><br>
     {% for article in articles%}
-        <h3><a href="/{% url 'article_detail' article.slug_article %}/">{{article.titre_article}}</a></h3>
+        <h3><a href="{% url 'blog:article_detail' article.slug_article %}">{{article.titre_article}}</a></h3>
         <p>{{article.corps_article}}</p>
         <p>Date de publication : {{article.date_creation_article}}</p>
-        <button class="boutonstyle"><a href="/{% url 'article_detail' article.slug_article %}/">En savoir plus...</a></button>
+        <button class="boutonstyle"><a href="{% url 'blog:article_detail' article.slug_article %}">En savoir plus...</a></button>
         <hr>
     {% endfor %}
         </div>
