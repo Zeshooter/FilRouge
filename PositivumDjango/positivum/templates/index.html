@@ -22,7 +22,7 @@
         <header>
         <!--        box contenant l'image du logo-->
 
-            <a href="#" id="logobox"><img src="{% static 'blog/img/logo.jpg' %}" id="logo" alt="Logo" title="Positivum"></a>
+            <a href="/" id="logobox"><img src="{% static 'blog/img/logo.jpg' %}" id="logo" alt="Logo" title="Positivum"></a>
 
         <!-- centre du header comprenant : Le slogan + la barre de recherche + la barre de navigation  -->
             <section id="centre_header">
@@ -42,11 +42,19 @@
                         </div>
                     </form>
                         
-                <!-- Boutons d'inscriptions et de connexion : ne mène à rien pour l'instant -->
+                <!-- Boutons d'inscriptions et de connexion -->
+                    
+                    {% if user.is_authenticated %}
                     <div id="connexion">
-                        <a href="https://www.google.fr" target="_blank"><button type="button" class="boutonstyle" name="inscription">S'inscrire</button></a>
-                        <button type="button" class="boutonstyle" name=connexion>Connexion</button>
+                        <a href="{% url 'logout_view' %}"><button type="button" class="boutonstyle" name=deconnexion>Se Déconnecter</button></a>
                     </div>
+                    {% else %}
+                    <div id="connexion">
+                        <a href="{% url 'register_view' %}"><button type="button" class="boutonstyle" name="inscription">S'inscrire</button></a>
+                        <a href="{% url 'login_view' %}"><button type="button" class="boutonstyle" name=connexion>Se Connecter</button></a>
+                    </div>
+                    {% endif %}
+
                 </div>
 
 
@@ -56,7 +64,7 @@
                     <nav id="navbar" class="navbar navbar-expand-md justify-content-center">
                         <ul class="navbar-nav" id="menu" class="menu">
                             <li class="nav-item-active">
-                                <a class="boutonstyle nav-link" href="#">Accueil</a>
+                                <a class="boutonstyle nav-link" href="/">Accueil</a>
                             </li>
 
                             <li class="nav-item dropdown">
@@ -166,12 +174,13 @@
                 <a href="https://twitter.com/"><img src="{% static 'blog/img/twitter.png' %}" class="ressoc" alt="twitter" name="twitter"></a>
             </span>
         </header>
-        <div id="contenu">
+        
+          
+
         {% block content %}
         
         {% endblock %}
-        </div>
-    </div>
+   
 
 
     <!--background slideshow-->

@@ -1,22 +1,49 @@
-{% extends 'blog/index.html' %}
+{% extends 'index.html' %}
 <head>
     <title>Liste_Articles</title>
 </head>
 {% block content %}
-<h3>Les dernières oeuvres dont ont parle :</h3>
-<h6>{% for i in oeuvres %}
-<p><h6>{{ i.nom_oeuvre }}</h6></p></br>
-{% endfor %}
+<div id="contenu">
+    <section class="card py-1 mb-4">
+        <div class="container">
+            <div class="text-center my-5">
+                <h5 class="fw-bolder">Bienvenue {{user.username|upper}} dans le blog le plus positif de la planète Web !!!</h5>
+                {% if oeuvrer %}
+                <p class="lead mb-0">Articles dédiés à {{oeuvrer}}</p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
 </div>
 
-<div id="contenu">
+<div id="contenu">   
+   <div class="card mb-4 col-lg-8 text-center h5">
+        <div class="card-header">Les Oeuvres dont on parle :</div>
+            <div class="card-body">
+                <div class="row">
+                {% for oeuvre in oeuvres %}
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled mb-0 text-body">
+                            <li><a href="{% url 'blog:oeuvre_article_liste' oeuvre.slug_oeuvre %}">{{oeuvre.nom_oeuvre}}</a></li>
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="contenu">   
 <h2>Liste des articles</h2>
 <div class="container">
     <div class="row justify-content-center">  
             {% for article in articles%}
                 <div class="col-lg-4 mb-4">                        
                     <div class="card bg-color" style="width: 18rem;">
-                        <img class="card-img-top" src="{{ article.visuel_article }}" alt="Card image cap">
+                        {% if article.visuel_article %}
+                        <img class="card-img-top" src="{{ article.visuel_article.url }}" alt="Card image cap">
+                        {% endif %}
                             <div class="card-body">
                                 <h5 class="card-title"><a href="{% url 'blog:article_detail' article.slug_article %}">{{article.titre_article}}</a></h5>
                                 <p class="card-text">{{article.corps_article|truncatechars:100}}</p>
@@ -26,6 +53,8 @@
                 </div>
             {% endfor %}
     </div>
-    {% include "blog/layout/paginator.html" with page=page_obj %}
+    <!-- {% include "blog/layout/paginator.html" with page=page_obj %} -->
+    {% include "blog/layout/paginator.html" with page=articles %}
+</div>
 </div>
 {% endblock %}

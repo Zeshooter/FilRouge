@@ -11,7 +11,7 @@ admin.site.register(Emotion)
 admin.site.register(Evenement)
 admin.site.register(Commentaire)
 admin.site.register(Videotheque)
-admin.site.register(Oeuvre)
+# admin.site.register(Oeuvre)
 admin.site.register(Professionnel)
 admin.site.register(Categorie_oeuvre)
 admin.site.register(Citation)
@@ -24,3 +24,7 @@ class articleadmin(admin.ModelAdmin):
     search_fields = ('titre_article', 'corps_article')
     ordering = ('auteur', 'status_article')
     list_filter = ('auteur', 'date_creation_article', 'publish')
+
+@admin.register(Oeuvre)
+class oeuvreadmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug_oeuvre':('nom_oeuvre',)}

@@ -20,6 +20,11 @@
     list-style-type: none;
     box-sizing : border-box;
 }
+a:link, a:visited,  a:hover, a:active
+{
+    color: #000000;
+    text-decoration: none;
+}
 
 body{
     display : flex;
@@ -59,6 +64,7 @@ header {
 }
 
 /* Changement de classe de Bootstrap pour l'adapter à la charte graphique du site */
+
 .pagination > li > a
 {
     background-color: var(--couleur1);
@@ -207,7 +213,7 @@ header {
 
 #searchbar1{
     display: flex;
-    border:#cb997e 2px solid;
+    border:var(--couleur1) 2px solid;
     border-radius : 30px;
     height: 5vh;
     width: 80%;
@@ -248,25 +254,25 @@ z-index: 9;
 
 /* Design de tous les boutons du site */
 a, li, a:hover, li:hover, a:visited, li:visited{
-    color:var(--couleur6);
+    color:var(--couleur2);
 } 
 
 .boutonstyle{
 display:flex;
-background-color: #ddbea9;
+background-color: var(--couleur1);
 width : 8vw;
 height: 5vh;
 justify-content: center;
 align-items: center;
-color : var(--couleur-fond);
+color : var(--couleur2);
 margin-right : 0.5vw;
 margin-top: 0.5vw;
 font-size: 100%;
 font-family: var(--font);
 text-align: center;
-border: 3px #cb997e solid;
+border: 3px var(--couleur5) solid;
 border-radius : 30px;
-text-shadow: 1px 1px 3px #842029;
+/* text-shadow: 1px 1px 1px black; */
 cursor:pointer;
 transition: 1s;
 }

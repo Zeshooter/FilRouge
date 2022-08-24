@@ -1,12 +1,52 @@
-{% extends 'blog/index.html' %}
+{% extends 'index.html' %}
+
 <head>
     <title>Detail</title>
 </head>
 {% block content %}
-    <p>Détail de l'article</p>
-    <h2>{{ article.titre_article }}</h2>
-    <br>
-    <p>{{ article.corps_article }}</p>
-    <br>
-    <p>Article publié le : {{ article.publish }} par {{ article.auteur }}</p>
+<p>Détail de l'article</p>
+<h2>{{ article.titre_article }}</h2>
+<br>
+<p>{{ article.corps_article }}</p>
+<br>
+<p>Article publié le : {{ article.publish }} par {{ article.auteur }}</p>
+
+<!-- Comments section-->
+<section class="mb-5">
+    <div class="card">
+        <h2>{% with commentaire.count as total_commentaire %}
+            {{total_commentaire}} commentaire{{total_commentaire|pluralize}}
+            {% endwith %}
+        </h2>
+        <div class="card-body">
+            <!-- Comment form-->
+            {% if nouveau_commentaire %}
+            <h3>Votre commentaire a été ajouté</h3>
+            {% else %}
+                <h3>Ajouter une nouveau commentaire :</h3>
+                <form action="" method="post" class="mb-5">
+                    {{formulaire_commentaire.as_p}}
+                    {% csrf_token %}
+                    <button class="btn mb-4"type="submit">Ajouter Commentaire</button>
+                </form>
+            {% endif %}
+
+
+            <!-- Single comment-->
+
+            {% for commentaire in commentaire %}
+            <div class="d-flex mb-2">
+                <div class="flex-shrink-0"><img class="rounded-circle"
+                        src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                <div class="ms-3">
+                    <div class="fw-bold">#{{forloop.counter}} {{commentaire.titre_commentaire}} <span class="text-muted">commenté le {{commentaire.date_heure_commentaire}}</span></div>
+                    {{commentaire.corps_commentaire}}
+                </div>
+            </div>
+            {% empty %}
+            <h2>Il n'y a pas encore de commentaires</h2>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 {% endblock %}

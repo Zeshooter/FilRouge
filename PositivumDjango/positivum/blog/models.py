@@ -3,8 +3,12 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from datetime import datetime
+from django.urls import reverse
 
 # Create your models here.
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return super(PublishedManager, self).get_queryset().filter(status_article='publié')
 
 class Type_professionnel(models.Model):
     nom_type_professionnel = models.CharField(max_length=50)
@@ -47,6 +51,7 @@ class Citation(models.Model):
 
 class Oeuvre(models.Model):
     nom_oeuvre = models.CharField(max_length=100)
+    slug_oeuvre = models.SlugField(max_length=100, null=True)
     synopsis_oeuvre = models.TextField(blank=True)
     visuel_oeuvre = models.ImageField(upload_to='visuel_oeuvre', blank=True)
     video_oeuvre = models.FileField(upload_to='videos_oeuvre', null=True, blank=True, validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
@@ -83,6 +88,8 @@ class Article(models.Model):
     citer = models.ManyToManyField(Citation, blank=True)
     ressentir = models.ManyToManyField(Emotion, blank=True)
     oeuvrer = models.ManyToManyField(Oeuvre)
+    objects = models.Manager() #manager par défaut
+    published = PublishedManager() #
 
     def __str__(self):
         return self.titre_article
@@ -94,7 +101,7 @@ class Commentaire(models.Model):
     commenter = models.ForeignKey(Article, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.titre_commentaire
+        return self.commenter.titre_article
 
 class Type_evenement(models.Model):
     nom_type_evenement = models.CharField(max_length=50)
