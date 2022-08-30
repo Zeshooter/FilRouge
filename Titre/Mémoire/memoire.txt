@@ -1,0 +1,28 @@
+Bonjour @DEV-DEVOPS31-21-01  ! J'espère que votre stage se passe bien et que je vous manque énormément. Un petit point sur le mémoire que vous devez rendre ainsi que sur le DP pour le titre DevOps. (Un seul mémoire est suffisant pour le Dev et pour le DevOps mais il vous faut un DP pour le Dev et un pour le CCP du CDA).
+Pour le mémoire voici ce qui est attendue. En terme de charte graphique c'est à vous de la créer (en général je vous conseil de garder la même que votre projet)
+ --->Abstract (Introduction en Anglais)
+ --->Introduction en Français
+ --->Compétences du Titre couvertes par le Projet (d'après votre REAC)
+ Analyse du Besoin :
+-->          Présentation l’entreprise
+-->          Contexte - Besoin 
+-->          Contraintes techniques
+ Spécifications Fonctionnelles :
+-->        Use Case
+-->          Diagramme d’activité
+-->          Diagramme séquence
+xxx          Diagramme classe (optionnel)
+--->         Maquettage + Arborescence 
+ CONCEPTION :
+-          MDC
+-          MLD
+ Outils Techniques Utilisés
+ Fonctionnalités 
+-          Ecran
+-          Code 
+ CONCLUSION
+ ANNEXES
+Exemples : 
+-          SQL
+-          Code pertinent
+-          Documentation
