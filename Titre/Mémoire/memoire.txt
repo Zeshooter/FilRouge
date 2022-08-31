@@ -14,12 +14,12 @@ Pour le mémoire voici ce qui est attendue. En terme de charte graphique c'est �
 xxx          Diagramme classe (optionnel)
 --->         Maquettage + Arborescence 
  CONCEPTION :
--          MDC
--          MLD
- Outils Techniques Utilisés
+--->          MDC
+--->          MLD
+---> Outils Techniques Utilisés
  Fonctionnalités 
--          Ecran
--          Code 
+-->          Ecran
+-->          Code 
  CONCLUSION
  ANNEXES
 Exemples : 
